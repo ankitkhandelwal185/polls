@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 5px;
+    color: purple
+}
+
+ul, form {
+    margin-left: 30px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 100%;
+    color: green;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+input {
+    background: yellow
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px
+}
