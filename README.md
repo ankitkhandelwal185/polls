@@ -5,6 +5,7 @@
 #SQL Database – To store the models when working on local environment and Performing raw SQL queries.
 
 *url*
+
     >http://localhost:3600/polls/
     >http://localhost:3600/polls/choice/
     >http://localhost:3600/polls/id/
