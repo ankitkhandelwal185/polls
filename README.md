@@ -6,8 +6,8 @@
 
 *url*
 
-    >http://localhost:3600/polls/
-    >http://localhost:3600/polls/choice/
-    >http://localhost:3600/polls/id/
-    >http://localhost:3600/polls/id/results/
-    >http://localhost:3600/polls/id/vote/
+    http://localhost:3600/polls/
+    http://localhost:3600/polls/choice/
+    http://localhost:3600/polls/id/
+    http://localhost:3600/polls/id/results/
+    http://localhost:3600/polls/id/vote/
