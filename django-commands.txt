@@ -1,0 +1,17 @@
+#to create a new project
+django-admin startproject projectName
+
+#to create a new app in projectName
+pyhton manage.py startapp appname
+
+#to start the webserver
+python manage.py runserver port(optional)
+
+//if permission denied in that directory
+sudo chown -R username directory/name/path
+
+#validates the migration history in the databases to catch problems with the existing migration files
+python manage.py makemigrations appname
+
+#to synchronizing database
+python manage.py migrate --database=name(option, if not default)
