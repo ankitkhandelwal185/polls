@@ -1,5 +1,7 @@
 #Django Framework – The project is built in Django, using a django app for each piece of functionality, developed as mentioned in Django Documentation and added some other functionality like GET/POST requests, Serializer, rest_framework, class views, render static files.
 
+#Elastic Search  a search and analytics engine 
+
 #HTML, CSS – For templates and styles.
 
 #SQL Database – To store the models when working on local environment and Performing raw SQL queries.

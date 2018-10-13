@@ -9,7 +9,6 @@ from rest_framework import status
 from .serializers import QuestionSerializer, ChoiceSerializer
 from rest_framework.views import APIView
 # Create your views here.
-
 class QuestionList(APIView):
 
     def get(self, request):

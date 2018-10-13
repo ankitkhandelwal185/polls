@@ -24,13 +24,18 @@ SECRET_KEY = '4%*zqzetd7fk%g^5umuow(#!es0ag4ft7p3vl%vnq7f#m2)+-+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
 
 # Application definition
 
 INSTALLED_APPS = [
+	'django_elasticsearch_dsl',
     'rest_framework',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -115,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
