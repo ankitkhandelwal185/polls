@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import QuestionSerializer, ChoiceSerializer
 from rest_framework.views import APIView
+import json
+import subprocess
 # Create your views here.
 class QuestionList(APIView):
 
@@ -75,3 +77,14 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+#get all data from question index
+class questionList_es(APIView):
+    def get(self, request):
+        dumpcmd = """curl -X GET -H 'Content-Type: application/json' "http://localhost:9200/question/_search" -d'{"query": {"match_all": {}}}'"""
+        results=json.loads(subprocess.check_output(dumpcmd, shell=True))
+        results_list=[]
+        for x in results["hits"]["hits"]:
+            results_list.append(x['_source'])
+        return Response(results_list, status=status.HTTP_201_CREATED)
