@@ -87,4 +87,4 @@ class questionList_es(APIView):
         result=[]
         for item in responce["hits"]["hits"]:
             result.append(item['_source'])
-        return Response(result, status=status.HTTP_201_CREATED)
+        return Response(result, status=status.HTTP_200_OK)
