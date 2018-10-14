@@ -82,9 +82,9 @@ def vote(request, question_id):
 #get all data from question index
 class questionList_es(APIView):
     def get(self, request):
-        dumpcmd = """curl -X GET -H 'Content-Type: application/json' "http://localhost:9200/question/_search" -d'{"query": {"match_all": {}}}'"""
-        results=json.loads(subprocess.check_output(dumpcmd, shell=True))
-        results_list=[]
-        for x in results["hits"]["hits"]:
-            results_list.append(x['_source'])
-        return Response(results_list, status=status.HTTP_201_CREATED)
+        query = """curl -X GET -H 'Content-Type: application/json' "http://localhost:9200/question/_search" -d'{"query": {"match_all": {}}}'"""
+        responce=json.loads(subprocess.check_output(query, shell=True))
+        result=[]
+        for item in responce["hits"]["hits"]:
+            result.append(item['_source'])
+        return Response(result, status=status.HTTP_201_CREATED)
