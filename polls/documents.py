@@ -12,7 +12,7 @@ class questionDocument(DocType):
 
 	class Meta:
 		model = Question # The model associated with this DocType
-		fields = ['question_text','pub_date']
+		fields = ['id','question_text','pub_date']
 
 #index for choice model
 choice = Index('choice')

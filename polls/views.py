@@ -88,3 +88,13 @@ class questionList_es(APIView):
         for item in responce["hits"]["hits"]:
             result.append(item['_source'])
         return Response(result, status=status.HTTP_200_OK)
+
+#get all data from choice index
+class choiceList_es(APIView):
+    def get(self, request):
+        query = """curl -X GET -H 'Content-Type: application/json' "http://localhost:9200/choice/_search" -d'{"query": {"match_all": {}}}'"""
+        responce=json.loads(subprocess.check_output(query, shell=True))
+        result=[]
+        for item in responce["hits"]["hits"]:
+            result.append(item['_source'])
+        return Response(result, status=status.HTTP_200_OK)
