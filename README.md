@@ -14,3 +14,4 @@
     http://localhost:3600/polls/id/results/
     http://localhost:3600/polls/id/vote/
     http://localhost:3600/polls/polls/es
+    http://localhost:3600/polls/es/

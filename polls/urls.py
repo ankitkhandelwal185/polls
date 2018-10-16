@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
     url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
-    url(r'^polls/es/$', views.questionList_es.as_view(), name='indexes'),
-    url(r'^choice/es/$', views.choiceList_es.as_view(), name='indexes'),
+    url(r'^polls/es/$', views.questionList_es.as_view()),
+    url(r'^choice/es/$', views.choiceList_es.as_view()),
+    url(r'^es/$', views.question_es.as_view()),
 ]
