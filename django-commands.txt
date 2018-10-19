@@ -18,3 +18,5 @@
 
 # ./elasticsearch-5.1.1/bin/elasticsearch
 # ./manage.py search_index --rebuild
+
+#python manage.py test polls
