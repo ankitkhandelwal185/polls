@@ -4,7 +4,7 @@
 
 #HTML, CSS – For templates and styles.
 
-#SQL Database – To store the models when working on local environment and Performing raw SQL queries.
+#SQL Database – To store the models when working on local environment and Performing ORM and RAW SQL queries.
 
 *url*
 
